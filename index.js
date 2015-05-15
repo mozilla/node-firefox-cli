@@ -5,7 +5,7 @@ var package = require(__dirname + '/package.json');
 program.version(package.version)
   .option('-D, --debug', 'enable debugging and debug output')
   .option('-q, --quiet', 'quiet output, except for errors')
-  .option('-v, --verbose', 'enable verbose output');
+  .option('-v, --verbose', 'enable verbose data output');
 
 function init (next) {
   return function () {
