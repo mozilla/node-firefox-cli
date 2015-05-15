@@ -1,0 +1,51 @@
+{
+  "name": "node-firefox-cli",
+  "version": "1.0.0",
+  "description": "Command line interface to control Firefox via the DevTools Remote Protocol",
+  "main": "index.js",
+  "dependencies": {
+    "commander": "^2.8.1",
+    "es6-promise": "^2.0.1",
+    "lodash": "^3.8.0",
+    "node-firefox-find-devices": "^1.0.0",
+    "node-firefox-find-ports": "^1.2.0",
+    "node-firefox-find-simulators": "^1.3.0",
+    "node-firefox-forward-ports": "^1.0.0",
+    "node-firefox-start-simulator": "^1.3.1",
+    "require-dir": "^0.3.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "mocha": "^1.21.4",
+    "mockery": "^1.4.0",
+    "node-firefox-build-tools": "^0.1.0",
+    "nodemock": "^0.3.4",
+    "should": "^4.0.4"
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mozilla/node-firefox-cli.git"
+  },
+  "keywords": [
+    "firefox",
+    "developer tools",
+    "b2g",
+    "firefox os",
+    "firefoxos",
+    "fxos",
+    "start"
+  ],
+  "author": "Mozilla (https://mozilla.org/)",
+  "contributors": [
+    "Les Orchard <me@lmorchard.com> (http://lmorchard.com)"
+  ],
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/mozilla/node-firefox-cli/issues"
+  },
+  "homepage": "https://github.com/mozilla/node-firefox-cli"
+}
