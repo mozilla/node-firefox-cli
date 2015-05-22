@@ -5,16 +5,19 @@ var package = require(__dirname + '/package.json');
 program.version(package.version)
   .option('-D, --debug', 'enable debugging and debug output')
   .option('-q, --quiet', 'quiet output, except for errors')
-  .option('-j, --json', 'JSON data output')
   .option('-v, --verbose', 'verbose output')
-  .option('-nc, --nocolors', 'no ANSI colors in JSON output');
+  .option('-j, --json', 'JSON data output')
+  .option('--nocolors', 'no ANSI colors in JSON output');
 
 // Common command init wrapper with error reporting.
 function init (cmd) {
   return function () {
     var args = Array.prototype.slice.call(arguments, 0);
     cmd.apply(program, args)
-      .catch(console.error);
+      .catch(function (err) {
+        console.error(err);
+        process.exit(1);
+      });
   }
 }
 
